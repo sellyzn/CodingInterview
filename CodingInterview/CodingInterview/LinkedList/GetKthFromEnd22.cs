@@ -6,7 +6,7 @@ namespace CodingInterview.LinkedList
 {
     public class GetKthFromEnd22
     {
-        public ListNode GetKthFromEnd(ListNode head, int k)
+        public ListNode getKthFromEnd(ListNode head, int k)
         {
             var fast = head;
             var slow = head;
