@@ -1,6 +1,8 @@
 ﻿using CodingInterview.Array;
 using CodingInterview.BinarySearch;
+using CodingInterview.HashTable;
 using CodingInterview.LinkedList;
+using CodingInterview.String;
 using System;
 using System.Collections.Generic;
 
@@ -97,11 +99,35 @@ namespace CodingInterview
             //[1, 3, 5]
             //[3, 1, 3]
 
-            var arr = new int[] { 3, 1, 3};
-            var ma = new MinArray11();
-            var res = ma.minArray1(arr);
+            //var arr = new int[] { 3, 1, 3};
+            //var ma = new MinArray11();
+            //var res = ma.minArray1(arr);
+            //Console.WriteLine(res);
+
+            //var s = "abcdefg";
+            //var rl = new ReverseLeftWords58II();
+            //var res = rl.reverseLeftWords(s, 2);
+            //Console.WriteLine(res);
+
+
+            //var s = " the sky   is blue  ";
+            //var rl = new ReverseWords58I();
+            //var res = rl.reverseWords1(s);
+            //Console.WriteLine(res);
+
+            //var s = "42";
+            //var s = "-42";
+            //var s = "4193 with words";
+            //var s = "words and 987";
+            //var s = "-2147483647";
+            //var sti = new StrToInt67();
+            //var res = sti.strToInt2(s);
+            //Console.WriteLine(res);
+
+            var s = "abcabcbb";
+            var lls = new LengthOfLongestSubstring48();
+            var res = lls.lengthOfLongestSubstring(s);
             Console.WriteLine(res);
-            
 
         }
 
