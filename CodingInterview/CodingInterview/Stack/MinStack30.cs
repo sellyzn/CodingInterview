@@ -20,7 +20,7 @@ namespace CodingInterview.Stack
         public void push(int x)
         {
             stackA.Push(x);
-            if (stackB.Count == 0 || x < min())
+            if (stackB.Count == 0 || x <= min())  //此处x<=min()，判断用<=而非<,避免了重复最小值被弹出 
                 stackB.Push(x);
         }
 
@@ -29,7 +29,7 @@ namespace CodingInterview.Stack
             //如果出栈的值等于最小值，说明栈中的最小值
             //已经出栈了，因为stackB中的栈顶元素存放的
             //就是最小值，所以stack栈B顶元素也要出栈
-            if (stackA.Pop() == min())
+            if (stackA.Pop() == min())   //关于 == 和equals的区别？？？
                 stackB.Pop();
         }
 
