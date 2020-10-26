@@ -6,6 +6,7 @@ namespace CodingInterview.String
 {
     public class StrToInt67
     {
+        //官方解法
         public int strToInt(string str)
         {
             var res = 0;
@@ -49,7 +50,7 @@ namespace CodingInterview.String
                 i++;
                 flag = -1;
             }
-            double res = 0;//这里必须是long，否则后面的判断临界值时计算会越界，无法判断出正确的结果，如输入"-91283472332"时
+            long res = 0;//这里必须是long，否则后面的判断临界值时计算会越界，无法判断出正确的结果，如输入"-91283472332"时
             while (i < cs.Length)
             {//尽量取更多的数字
                 if (cs[i] > '9' || cs[i] < '0') break;
@@ -61,7 +62,7 @@ namespace CodingInterview.String
             return (int)res;//这里强转不能省略;
         }
 
-        public int strToInt2(string str)
+        public int strToInt2Mine(string str)
         {
             //str = str.Trim();
             //if (str.Length == 0)
@@ -82,7 +83,7 @@ namespace CodingInterview.String
                 i++;
                 flag = -1;
             }
-            double res = 0;
+            double res = 0;  //long不够
             while(i < str.Length)
             {
                 if (str[i] < '0' || str[i] > '9')

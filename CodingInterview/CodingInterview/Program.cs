@@ -71,24 +71,26 @@ namespace CodingInterview
 
 
             //var arr = new int[] { 1, 3, 3, 3, 4, 6 };
-            ////var fi = new findRepeatNumber03();
-            ////var res = fi.findRepeatNumber(arr);
+            //var arr = new int[] { 1, 2, 3, 2 };
+            //var fi = new FindRepeatNumber03();
+            //var res = fi.findRepeatNumberR(arr);
             //var se = new Search53();
-            //var res = se.search(arr,5);
+            //var res = se.search(arr, 5);
             //Console.WriteLine(res);
 
-            //var arr = new int[][]
-            //{
-            //    new int[]{1, 2, 3, 4},
-            //    new int[]{5, 6, 7, 8},
-            //    new int[]{9, 10, 11, 12},
-            //};
-            //var so = new SpiralOrder29();
-            //var res = so.spiralOrder(arr);
-            //foreach(var num in res)
-            //{
-            //    Console.WriteLine(num);
-            //}
+            var arr = new int[][]
+            {
+                new int[]{1, 2, 3, 4},
+                new int[]{5, 6, 7, 8},
+                new int[]{9, 10, 11, 12},
+                //new int[]{13, 14, 15, 16}
+            };
+            var so = new SpiralOrder29();
+            var res = so.spiralOrder(arr);
+            foreach (var num in res)
+            {
+                Console.WriteLine(num);
+            }
 
             //var arr = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 9 };
             //var arr = new int[] { 0, 1, 3 };
@@ -124,10 +126,16 @@ namespace CodingInterview
             //var res = sti.strToInt2(s);
             //Console.WriteLine(res);
 
-            var s = "abcabcbb";
-            var lls = new LengthOfLongestSubstring48();
-            var res = lls.lengthOfLongestSubstring(s);
-            Console.WriteLine(res);
+            //var s = "abcabcbb";
+            //var lls = new LengthOfLongestSubstring48();
+            //var res = lls.lengthOfLongestSubstring(s);
+            //Console.WriteLine(res);
+
+            int a = 1000;
+            int b = 1000;
+            Console.WriteLine(a == b);
+
+            
 
         }
 

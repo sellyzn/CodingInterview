@@ -13,18 +13,35 @@ namespace CodingInterview.Queue
         //    var len = nums.Length;
         //    var size = len > k ? len - k + 1 : 1;
         //    var res = new int[size];
+        //    var index = 0;
 
-        //    //var deque = new Stack<int>();
-        //    var deque = new LinkedList<int>();
-        //    for(var i = 0; i < k; i++)
+        //    var deque = new Queue<int>();
+        //    //var deque = new LinkedList<int>();
+        //    for (var i = 0; i < k; i++)
         //    {
-        //        //while(deque != null && nums[i] > deque.Peek())
-        //        //{
-        //        //    deque.Pop();
-        //        //}
-        //        //deque.Push(nums[i]);
-
+        //        while (deque != null && nums[i] > deque.Peek())
+        //        {
+        //            deque.Dequeue();
+        //        }
+        //        deque.Enqueue(nums[i]);
         //    }
+        //    res[index++] = deque.Peek();
+
+        //    for(var i = k; i < nums.Length; i++)
+        //    {
+        //        if (nums[i - k] == deque.Peek())
+        //            deque.Dequeue();
+        //        while(nums[i] >= deque.Peek())
+        //        {
+        //            deque.Dequeue();
+        //        }
+        //        if(deque == null || deque.Peek() <= nums[i])
+        //        {
+        //            deque.Enqueue(nums[i]);
+        //        }
+        //        res[index++] = deque.Peek();
+        //    }
+
         //}
 
         /*
