@@ -23,6 +23,7 @@ namespace CodingInterview.BinarySearch
             return numbers[left];
         }
 
+        //正确
         public int minArray1(int[] numbers)
         {
             var left = 0;
