@@ -9,9 +9,16 @@ namespace CodingInterview.Tree
         public int val;
         public TreeNode left;
         public TreeNode right;
+        private int? v;
+
         public TreeNode(int x)
         {
             val = x;
+        }
+
+        public TreeNode(int? v)
+        {
+            this.v = v;
         }
     }
 }

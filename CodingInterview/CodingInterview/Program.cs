@@ -1,8 +1,13 @@
 ﻿using CodingInterview.Array;
 using CodingInterview.BinarySearch;
+using CodingInterview.DivideAndConquer;
+using CodingInterview.DynamicProgramming;
 using CodingInterview.HashTable;
 using CodingInterview.LinkedList;
+using CodingInterview.Mathematics;
+using CodingInterview.Others;
 using CodingInterview.String;
+using CodingInterview.Tree;
 using System;
 using System.Collections.Generic;
 
@@ -78,19 +83,19 @@ namespace CodingInterview
             //var res = se.search(arr, 5);
             //Console.WriteLine(res);
 
-            var arr = new int[][]
-            {
-                new int[]{1, 2, 3, 4},
-                new int[]{5, 6, 7, 8},
-                new int[]{9, 10, 11, 12},
-                //new int[]{13, 14, 15, 16}
-            };
-            var so = new SpiralOrder29();
-            var res = so.spiralOrder(arr);
-            foreach (var num in res)
-            {
-                Console.WriteLine(num);
-            }
+            //var arr = new int[][]
+            //{
+            //    new int[]{1, 2, 3, 4},
+            //    new int[]{5, 6, 7, 8},
+            //    new int[]{9, 10, 11, 12},
+            //    //new int[]{13, 14, 15, 16}
+            //};
+            //var so = new SpiralOrder29();
+            //var res = so.spiralOrder(arr);
+            //foreach (var num in res)
+            //{
+            //    Console.WriteLine(num);
+            //}
 
             //var arr = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 9 };
             //var arr = new int[] { 0, 1, 3 };
@@ -101,7 +106,7 @@ namespace CodingInterview
             //[1, 3, 5]
             //[3, 1, 3]
 
-            //var arr = new int[] { 3, 1, 3};
+            //var arr = new int[] { 3, 1, 3 };
             //var ma = new MinArray11();
             //var res = ma.minArray1(arr);
             //Console.WriteLine(res);
@@ -131,11 +136,51 @@ namespace CodingInterview
             //var res = lls.lengthOfLongestSubstring(s);
             //Console.WriteLine(res);
 
-            int a = 1000;
-            int b = 1000;
-            Console.WriteLine(a == b);
+            //int a = 1000;
+            //int b = 1000;
+            //Console.WriteLine(a == b);
 
-            
+            //var nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            //var max = new MaxSubArray42();
+            //var res = max.maxSubArray2(nums);
+            //Console.WriteLine(res);
+
+            //var grid = new int[][] {new int[] {1,3,1},
+            //                        new int[]{1,5,1},
+            //                        new int[]{4,2,1}};
+            //var maxvalue = new MaxValue47();
+            //var res = maxvalue.maxValue(grid);
+            //Console.WriteLine(res);
+
+            //var n = 0;
+            //var pn = new PrintNumbers17();
+            //var res = pn.printNumbers(n);
+            //foreach(var num in res)
+            //{
+            //    Console.WriteLine(num);
+            //}
+            //var nums = new int[] { 1, 2, 3, 4 };
+            //var nums = new int[0] ;
+            //var ex = new Exchange21();
+            //var res = ex.exchange(nums);
+            //foreach(var num in res)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            //var nums = new int[] { 4, 1, 4, 6 };
+            //var sn = new SingleNumbers56I();
+            //var res = sn.singleNumbers(nums);
+            //foreach(var num in res)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            //var nums = new int[] { 3, 9, 20, 15, 7 };
+            //var lo = new LevelOrder32I();
+            //var tree = lo.levelOrder(nums);
+            var result = new LeverOrder32III();
+            result.Test();
 
         }
 
@@ -143,22 +188,22 @@ namespace CodingInterview
 
         
 
-        public static ListNode reverseList(ListNode head)
-        {
-            if (head == null || head.next == null)
-                return head;
-            ListNode cur = null;
-            var pre = head;
-            while(pre != null)
-            {
-                var tmp = pre.next;                              
-                pre.next = cur;
-                cur = pre;
-                pre = tmp;
+        //public static ListNode reverseList(ListNode head)
+        //{
+        //    if (head == null || head.next == null)
+        //        return head;
+        //    ListNode cur = null;
+        //    var pre = head;
+        //    while(pre != null)
+        //    {
+        //        var tmp = pre.next;                              
+        //        pre.next = cur;
+        //        cur = pre;
+        //        pre = tmp;
 
-            }
-            return cur;
-        }
+        //    }
+        //    return cur;
+        //}
 
         
 

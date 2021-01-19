@@ -12,7 +12,7 @@ namespace CodingInterview.Tree
             var res = new List<IList<int>>();
             if (root != null)
                 queue.Enqueue(root);
-            while(queue != null)
+            while(queue.Count > 0)  //wrong: queue != null
             {
                 var tmp = new List<int>();
                 var len = queue.Count;
@@ -31,16 +31,16 @@ namespace CodingInterview.Tree
         }
         public IList<IList<int>> levelOrder1(TreeNode root)
         {
-            //边界条件判断
-            if (root == null)
-                return new List<IList<int>>();
+            ////边界条件判断
+            //if (root == null)
+            //    return new List<IList<int>>();
             //队列
             var queue = new Queue<TreeNode>();
             var res = new List<IList<int>>();
             //根节点入队
             queue.Enqueue(root);
             //如果队列不为空就继续循环
-            while (queue !=null)
+            while (queue.Count > 0)
             {
                 //BFS打印，levelNum表示的是每层的结点数
                 var levelNum = queue.Count;
