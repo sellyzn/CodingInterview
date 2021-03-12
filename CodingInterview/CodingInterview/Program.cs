@@ -1,13 +1,13 @@
 ﻿using CodingInterview.Array;
 using CodingInterview.BinarySearch;
-using CodingInterview.DivideAndConquer;
-using CodingInterview.DynamicProgramming;
-using CodingInterview.HashTable;
-using CodingInterview.LinkedList;
-using CodingInterview.Mathematics;
-using CodingInterview.Others;
-using CodingInterview.String;
-using CodingInterview.Tree;
+using CodingInterview.DivideAndConquerProblems;
+using CodingInterview.DynamicProgrammingProblems;
+using CodingInterview.HashTableProblems;
+using CodingInterview.LinkedListProblems;
+using CodingInterview.MathematicsProblems;
+using CodingInterview.OtherProblems;
+using CodingInterview.StringProblems;
+using CodingInterview.TreeProblems;
 using System;
 using System.Collections.Generic;
 
