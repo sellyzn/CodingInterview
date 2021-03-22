@@ -17,6 +17,8 @@ namespace CodingInterview.QueueProblems
 
         //    var deque = new Queue<int>();
         //    //var deque = new LinkedList<int>();
+            
+        //    //未形成窗口
         //    for (var i = 0; i < k; i++)
         //    {
         //        while (deque != null && nums[i] > deque.Peek())
@@ -27,21 +29,22 @@ namespace CodingInterview.QueueProblems
         //    }
         //    res[index++] = deque.Peek();
 
-        //    for(var i = k; i < nums.Length; i++)
+        //    //形成窗口后
+        //    for (var i = k; i < nums.Length; i++)
         //    {
         //        if (nums[i - k] == deque.Peek())
         //            deque.Dequeue();
-        //        while(nums[i] >= deque.Peek())
+        //        while (nums[i] >= deque.Peek())
         //        {
         //            deque.Dequeue();
         //        }
-        //        if(deque == null || deque.Peek() <= nums[i])
+        //        if (deque == null || deque.Peek() <= nums[i])
         //        {
         //            deque.Enqueue(nums[i]);
         //        }
         //        res[index++] = deque.Peek();
         //    }
-
+        //    return res;
         //}
 
         /*
@@ -87,6 +90,43 @@ namespace CodingInterview.QueueProblems
         }
         */
 
+        public int[] MaxSlidingWindow(int[] nums, int k)
+        {
+            if (nums.Length == 0 || k == 0)
+                return new int[0];
+            var deque = new LinkedList<int>();
+            var res = new int[nums.Length - k + 1];
+            
+            //窗口未形成
+            for(int i = 0; i < k; i++)
+            {
+                while(deque.Count != 0 && nums[i] > deque.Last.Value)
+                {
+                    deque.RemoveLast();
+                }
+                deque.AddLast(nums[i]);
+            }
+            res[0] = deque.First.Value;
+            //窗口形成后
+            for(int i = k; i < nums.Length; i++)
+            {
+                //先判断队首元素值（窗口内最大元素值）是否与窗口左端点将要移出窗口的元素值相等，若相等，则需要将队首元素删除。
+                if (deque.First.Value == nums[i - k])
+                {
+                    deque.RemoveFirst();
+                }
+                //判断队尾元素与将要移入窗口的元素值大小，将队列中小于将要移入元素值的元素全部出队。
+                while (deque.Count != 0 && nums[i] > deque.Last.Value)
+                {
+                    deque.RemoveLast();
+                }
+                //队列添加元素
+                deque.AddLast(nums[i]);
+                //结果数组中添加队首元素值
+                res[i - k + 1] = deque.First.Value;
+            }
+            return res;
+        }
 
     }
 }

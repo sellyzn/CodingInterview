@@ -1,11 +1,14 @@
-﻿using CodingInterview.Array;
-using CodingInterview.BinarySearch;
+﻿
+using CodingInterview.BackTrackingProblems;
 using CodingInterview.DivideAndConquerProblems;
 using CodingInterview.DynamicProgrammingProblems;
 using CodingInterview.HashTableProblems;
+using CodingInterview.HeapProblems;
 using CodingInterview.LinkedListProblems;
 using CodingInterview.MathematicsProblems;
 using CodingInterview.OtherProblems;
+using CodingInterview.SortProblems;
+using CodingInterview.StackProblems;
 using CodingInterview.StringProblems;
 using CodingInterview.TreeProblems;
 using System;
@@ -179,8 +182,47 @@ namespace CodingInterview
             //var nums = new int[] { 3, 9, 20, 15, 7 };
             //var lo = new LevelOrder32I();
             //var tree = lo.levelOrder(nums);
-            var result = new LeverOrder32III();
-            result.Test();
+            //var result = new LeverOrder32III();
+            //result.Test();
+
+            //var pushed = new int[] { 1, 2, 3, 4, 5 };
+            //var popped = new int[] { 4, 5, 3, 2, 1 };
+            //ValidateStackSequences31 vs = new ValidateStackSequences31();
+            //bool res = vs.ValidateStackSequences(pushed, popped);
+            //Console.WriteLine(res);
+
+            //int[] nums = new int[] { 1,2,3,1 };
+            //MinNumber45 mn = new MinNumber45();
+            //string res = mn.MinNumber(nums);
+            //Console.WriteLine(res);
+
+            //string res = mn.MinNumber(nums);
+            //Console.WriteLine(res);
+            //int[] nums = new int[] { 2, 5, 3, 9, 1, 7, 6, 8, 4, 0 };
+            //QuickSortAlgorithm qs = new QuickSortAlgorithm();
+            //qs.QuickSort(nums);
+            //foreach(int num in nums)
+            //{
+            //    Console.WriteLine(num); ;
+            //}
+
+
+            //int[] arr = new int[] { 2, 5, 3, 9, 1, 7, 6, 8, 4, 0 };
+            //int[] arr = new int[] { 0,1,2,1 };
+            //int[] nums = new int[] { 0, 0, 2, 3, 2, 1, 1, 2, 0, 4 };
+            //GetLeastNumbers40 gln = new GetLeastNumbers40();
+            //int k = 4;
+            //int[] resGLN = gln.GetLessNumbersQS(nums, k);
+            //foreach (int num in resGLN)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+            string s = "abc";
+            Permutation38 p = new Permutation38();
+            string[] res = p.Permutation(s);
+            foreach(string strs in res)
+                Console.WriteLine(strs);
 
         }
 
